@@ -1,0 +1,56 @@
+<?php
+/**
+ * $this Zend_View
+ */
+?>
+<?php
+$host = $_SERVER['HTTP_HOST'];
+die('here');
+?>
+
+<!DOCTYP html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>kotopes</title>
+        <!--link type="text/css" rel="stylesheet" href="css/reset.css" /-->
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <!--[if  lte IE 7 ]>
+            <link type="text/css" rel="stylesheet" href="css/lte7.css" />
+            <!--[if IE 6 ]>
+                    <link type="text/css" rel="stylesheet" href="lt7.css" />
+            <![endif]-->
+        <![endif]-->
+        <script type="text/javascript" src="<?php $host ?>/library/Js/jquery.js" ></script>
+    </head>
+    <body>
+        <div class="ololosh"></div>
+        <script type="text/javascript">
+            
+        </script>
+        <script type="text/javascript">
+            var storage = null;
+            
+            if(window.globalStorage) {
+                alert('globalStorage');
+                storage = window.globalStorage[document.domain];
+            }else if(window.openDatabase) {
+                storage = window.openDatabase("storage", "1.0", "site storage" + document.domain);
+                storage.transaction(function(tx){
+                    tx.executeSql(
+                            "Create TABLE IF NOT EXISTS config(key TEXT, value TEXT, unique(key)",
+                            [],
+                            function (tx, result) {
+                                alert('success');
+                            },
+                            function (tx, error) {
+                                alert('failture');
+                            }
+                    );
+                });
+            }
+            
+            
+        </script>
+    </body>
+</html>

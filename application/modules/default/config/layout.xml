@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutlist>
+    <default>
+        <layout type="default/test" name="layout" template="scripts/layout.phtml" />
+        <index>
+            <viewer type="default_viewer_test" name="testname" area="testarea" template="scripts/index/index.phtml" order="1" ></viewer>
+            <index>
+                <viewer type="default_viewer_testheader" name="testname" template="scripts/index/index.phtml" area="testarea" order="2" ></viewer>
+            </index>
+        </index>
+    </default>
+    <auth>
+        <layout type="default/test" name="layout" template="script/layout.phtml" />
+        <action>
+            <last>
+                <viewer type="default/test" name="testname" area="testarea" template="scripts/index/index.phtml" order="2" ></viewer>
+            </last>
+        </action>
+    </auth>
+    <no-route>
+        <layout type="default/test" name="layout" template="scripts/no-route.phtml" />
+    </no-route>
+</layoutlist>

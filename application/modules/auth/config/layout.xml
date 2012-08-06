@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutlist>
+    <default>
+        <index>
+            <index>
+                <!--viewer type="default_viewer_test" name="testname" area="testarea" template="scripts/index/index.phtml" order="1" ></viewer-->
+            </index>
+        </index>
+    </default>
+    <auth>
+        <layput type="default/test" name="layout" template="script/layout.phtml" />
+        <index>
+            <index>
+
+            </index>
+        </index>
+    </auth>
+</layoutlist>
